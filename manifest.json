@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Education Board Results Auto Captcha Solver",
+  "version": "1.0",
+  "description": "This extension automatically solves captchas on the Education Board Results website, helping you quickly access results without manually entering captcha codes. It simplifies the process by filling in required fields, saving you time and effort when checking exam results.",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://www.educationboardresults.gov.bd/*",
+        "http://www.educationboardresults.gov.bd/index.php*"
+      ],
+      "js": ["index.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "redirect.html",
+    "default_icon": "brain-icon.png"
+  },
+  "icons": {
+    "48": "brain-icon.png"
+  }
+}
